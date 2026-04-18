@@ -1,0 +1,19 @@
+## .gitignore pro C# / .NET
+
+# Build vystupy
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# Logy (generovane za behu)
+*.log
+log.txt
+
+# Uzivatelska data (generovana za behu)
+players/
+
+# IDE
+.idea/
+*.DS_Store
