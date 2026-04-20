@@ -1,0 +1,6 @@
+{
+  "Port": 4000,
+  "LogFile": "log.txt",
+  "MaxInventorySize": 10,
+  "DataDir": "data"
+}

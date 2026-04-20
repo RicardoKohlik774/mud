@@ -2,25 +2,61 @@
   {
     "id": "vstupni_sin",
     "name": "Vstupní síň",
-    "description": "Vlhká kamenná síň s pochodněmi na zdech. Odněkud táhne chladný vzduch.",
-    "exits": {
-      "sever": "chodba_kosti",
-      "vychod": "studna_prani"
-    },
-    "items": ["rezavy_mec", "svicka"],
+    "description": "Vlhká kamenná síň s pochodněmi na zdech. Odněkud táhne chladný vzduch. Na zdi visí vybledlá mapa podzemí.",
+    "exits": { "sever": "chodba_kosti", "vychod": "studna_prani" },
+    "items": ["svicka"],
     "npcs": ["stary_strazce"],
-    "locked": false
+    "locked": false,
+    "lockKey": null
   },
   {
     "id": "chodba_kosti",
     "name": "Chodba kostí",
-    "description": "Úzká chodba lemovaná hromadami starých kostí. V dálce slyšíš kroky.",
-    "exits": {
-      "jih": "vstupni_sin",
-      "vychod": "zbrojnice"
-    },
+    "description": "Úzká chodba lemovaná hromadami starých kostí. V dálce slyšíš kroky. Stěny jsou vlhké a pokryté mechy.",
+    "exits": { "jih": "vstupni_sin", "vychod": "zbrojnice" },
     "items": [],
     "npcs": ["goblin_hlidac"],
-    "locked": false
+    "locked": false,
+    "lockKey": null
+  },
+  {
+    "id": "studna_prani",
+    "name": "Studna přání",
+    "description": "Kruhová místnost s prastarou kamennou studnou uprostřed. Voda slabě září modravým světlem.",
+    "exits": { "zapad": "vstupni_sin" },
+    "items": ["leciva_bylina", "rezavy_mec"],
+    "npcs": [],
+    "locked": false,
+    "lockKey": null
+  },
+  {
+    "id": "zbrojnice",
+    "name": "Zbrojnice",
+    "description": "Velká síň plná rezavých regálů se zbraněmi. Většina je nepoužitelná, ale pár kusů ještě drží pohromadě.",
+    "exits": { "zapad": "chodba_kosti", "jih": "krypta" },
+    "items": ["zbroj_fragment", "lektvar_sily"],
+    "npcs": ["goblin_bojovnik"],
+    "locked": false,
+    "lockKey": null
+  },
+  {
+    "id": "krypta",
+    "name": "Zapečetěná krypta",
+    "description": "Stará krypta s kamennými sarkofágy. Vzduch je těžký a zatuchlý. Vede odtud chodba na východ.",
+    "exits": { "sever": "zbrojnice", "vychod": "drakovyl_sal" },
+    "items": ["jedovata_lahvicka"],
+    "npcs": [],
+    "locked": true,
+    "lockKey": "stary_klic"
+  },
+  {
+    "id": "drakovyl_sal",
+    "name": "Drakův sál",
+    "description": "Obrovský sál ze zlatých kamenů. Vzduch se třese dunivým dechem. Toto je srdce prokletého podzemí.",
+    "exits": { "zapad": "krypta" },
+    "items": [],
+    "npcs": ["drak_finalny"],
+    "locked": false,
+    "lockKey": null
   }
 ]

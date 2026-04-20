@@ -1,0 +1,92 @@
+[
+  {
+    "id": "rezavy_mec",
+    "name": "rezavý meč",
+    "description": "Starý zkorodovaný meč. Stále ale drží ostří.",
+    "type": "weapon",
+    "attackBonus": 5,
+    "defenseBonus": 0,
+    "effect": null
+  },
+  {
+    "id": "svicka",
+    "name": "svíčka",
+    "description": "Malá vosková svíčka. Mohla by být užitečná ve tmě.",
+    "type": "consumable",
+    "attackBonus": 0,
+    "defenseBonus": 0,
+    "effect": { "type": "light", "value": 1, "duration": 3 }
+  },
+  {
+    "id": "leciva_bylina",
+    "name": "léčivá bylina",
+    "description": "Zelená bylina s výraznou vůní. Zacelí rány.",
+    "type": "consumable",
+    "attackBonus": 0,
+    "defenseBonus": 0,
+    "effect": { "type": "heal", "value": 30, "duration": 0 }
+  },
+  {
+    "id": "jedovata_lahvicka",
+    "name": "jedovatá lahvička",
+    "description": "Lahvička se zelenou tekutinou. Otrávíš ní nepřátele nebo... sebe.",
+    "type": "consumable",
+    "attackBonus": 0,
+    "defenseBonus": 0,
+    "effect": { "type": "poison", "value": 8, "duration": 4 }
+  },
+  {
+    "id": "stary_klic",
+    "name": "starý klíč",
+    "description": "Rezavý železný klíč. Mohl by otevřít nějaké dveře na jihu.",
+    "type": "key",
+    "attackBonus": 0,
+    "defenseBonus": 0,
+    "effect": null
+  },
+  {
+    "id": "goblin_klice",
+    "name": "gobliní klíče",
+    "description": "Chomáč klíčů uloupených goblinem. Zvláštní je, že jeden vypadá starý.",
+    "type": "key",
+    "attackBonus": 0,
+    "defenseBonus": 0,
+    "effect": null
+  },
+  {
+    "id": "zbroj_fragment",
+    "name": "fragment zbroje",
+    "description": "Kus staré brnění. Poskytuje základní ochranu.",
+    "type": "armor",
+    "attackBonus": 0,
+    "defenseBonus": 3,
+    "effect": null
+  },
+  {
+    "id": "lektvar_sily",
+    "name": "lektvar síly",
+    "description": "Červený nápoj bublající energií. Dočasně zvyšuje útok.",
+    "type": "consumable",
+    "attackBonus": 0,
+    "defenseBonus": 0,
+    "effect": { "type": "buff_attack", "value": 8, "duration": 3 }
+  },
+  {
+    "id": "artefakt_ohnive_oko",
+    "name": "Ohnivé Oko",
+    "description": "Zářivý rubín s tančícím plamenem uvnitř. Vyzařuje prastarou moc.",
+    "type": "artifact",
+    "attackBonus": 3,
+    "defenseBonus": 0,
+    "effect": null
+  },
+  {
+    "id": "artefakt_ledova_runa",
+    "name": "Ledová Runa",
+    "description": "Modrý kámen s vytepanou runou. Studený jako ledovec.",
+    "type": "artifact",
+    "attackBonus": 0,
+    "defenseBonus": 3,
+    "effect": null
+  }
+]
