@@ -1,0 +1,50 @@
+[
+  {
+    "id": "stary_strazce",
+    "name": "Starý strážce",
+    "dialog": "Zadrž, poutníče! Toto místo skrývá mnohá nebezpečí. Goblin hlídač v chodbě kostí má klíč k zapečetěné kryptě — za ní leží cesta k Drakovu sálu. Budeš potřebovat léčivou bylinu. Najdeš ji u studny přání.",
+    "isHostile": false,
+    "isFinalBoss": false,
+    "maxHp": 60,
+    "attack": 8,
+    "defense": 3,
+    "loot": ["leciva_bylina"],
+    "xpReward": 0
+  },
+  {
+    "id": "goblin_hlidac",
+    "name": "Goblin hlídač",
+    "dialog": "Grrr! Táhni pryč, jinak tě rozsekám na kousky!",
+    "isHostile": true,
+    "isFinalBoss": false,
+    "maxHp": 30,
+    "attack": 7,
+    "defense": 1,
+    "loot": ["stary_klic"],
+    "xpReward": 20
+  },
+  {
+    "id": "goblin_bojovnik",
+    "name": "Goblin bojovník",
+    "dialog": "Toto je naše území! Odejdi nebo zemři!",
+    "isHostile": true,
+    "isFinalBoss": false,
+    "maxHp": 50,
+    "attack": 12,
+    "defense": 3,
+    "loot": ["zbroj_fragment"],
+    "xpReward": 35
+  },
+  {
+    "id": "drak_finalny",
+    "name": "Drak Záhuby",
+    "dialog": "Troufalý smrtelníku! Přišel jsi pro mé artefakty? Tisíce před tebou to zkusily — a jejich kosti zdobí mé sídlo. Ty budeš další!",
+    "isHostile": true,
+    "isFinalBoss": true,
+    "maxHp": 180,
+    "attack": 22,
+    "defense": 8,
+    "loot": ["artefakt_ohnive_oko", "artefakt_ledova_runa"],
+    "xpReward": 200
+  }
+]

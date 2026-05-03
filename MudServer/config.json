@@ -1,0 +1,8 @@
+{
+  "Port": 4000,
+  "LogFile": "log.txt",
+  "MaxInventorySize": 10,
+  "PlayerMaxHp": 100,
+  "PlayerBaseAttack": 10,
+  "DataDir": "data"
+}
