@@ -275,6 +275,8 @@ public class CommandDispatcher
                 break;
 
             case "light":
+                _s.ActiveEffects.RemoveAll(e => e.Type == "light");
+                _s.ActiveEffects.Add(new ActiveEffect { Type = "light", Value = 1, RemainingTurns = item.Effect.Duration });
                 await _s.SendAsync($"🕯 {item.Name} svítí jasným světlem po {item.Effect.Duration} tahů.");
                 _s.Inventory.Remove(found);
                 break;
