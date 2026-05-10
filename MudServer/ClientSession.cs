@@ -14,6 +14,7 @@ public class ClientSession
     private readonly ServerConfig _config;
     private CommandDispatcher? _dispatcher;
     private StreamWriter? _writer;
+    private string _passwordHash = "";
 
     public string? PlayerName      { get; set; }
     public string CurrentRoomId    { get; set; } = "vstupni_sin";
@@ -106,6 +107,7 @@ public class ClientSession
                 await SendAsync("Špatné heslo. Odpojuji.");
                 return false;
             }
+            _passwordHash = data.PasswordHash;
             PlayerName = data.Name;
             CurrentRoomId = _world.IsValidRoom(data.CurrentRoomId) ? data.CurrentRoomId : _world.StartRoomId;
             Inventory = data.Inventory;
@@ -120,12 +122,13 @@ public class ClientSession
             string? pw = await reader.ReadLineAsync();
             if (string.IsNullOrWhiteSpace(pw)) { await SendAsync("Neplatné heslo."); return false; }
 
+            _passwordHash = PlayerPersistence.HashPassword(pw);
             PlayerName = name;
             LoginTime = DateTime.Now;
             await _persistence.SaveAsync(new PlayerData
             {
                 Name = name,
-                PasswordHash = PlayerPersistence.HashPassword(pw),
+                PasswordHash = _passwordHash,
                 CurrentRoomId = _world.StartRoomId,
                 Inventory = new(),
                 CurrentHp = MaxHp
@@ -195,7 +198,7 @@ public class ClientSession
         await _persistence.SaveAsync(new PlayerData
         {
             Name = PlayerName,
-            PasswordHash = (await _persistence.LoadAsync(PlayerName))?.PasswordHash ?? "",
+            PasswordHash = _passwordHash,
             CurrentRoomId = CurrentRoomId,
             Inventory = Inventory,
             CurrentHp = CurrentHp,
