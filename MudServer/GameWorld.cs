@@ -71,7 +71,7 @@ public class GameWorld
 
     public List<NpcInstance> GetNpcsInRoom(string roomId)
     {
-        lock (_lock) { _roomNpcs.TryGetValue(roomId, out var list); return list ?? new(); }
+        lock (_lock) { _roomNpcs.TryGetValue(roomId, out var list); return list?.ToList() ?? new(); }
     }
 
     public NpcInstance? FindNpcInRoom(string roomId, string name)
